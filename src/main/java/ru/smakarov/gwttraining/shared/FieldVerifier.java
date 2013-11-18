@@ -37,6 +37,9 @@ public class FieldVerifier {
     if (name == null) {
       return false;
     }
+    if (name.isEmpty()) {
+    	return false;
+    }
     return name.length() > 4;
   }
 }
