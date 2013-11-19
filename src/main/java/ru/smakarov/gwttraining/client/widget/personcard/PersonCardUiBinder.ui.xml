@@ -1,0 +1,26 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.important {
+			font-weight: bold;
+		}
+	</ui:style>
+	<g:AbsolutePanel height="180px" ui:field="mainPanel" styleName="security-badge-border" width="400">
+			<g:at left="10" top="10">
+				<g:Image width="154px" height="160px" ui:field="photo"/>
+			</g:at>
+			<g:at left="182" top="10">
+				<g:Label text="SECURITY BADGE" width="208px" height="30px" styleName="security-badge-label" ui:field="securityBadgeLabel"/>
+			</g:at>
+			<g:at left="182" top="46">
+				<g:Label text="Name:" width="208px" height="18px" ui:field="nameLabel"/>
+			</g:at>
+			<g:at left="182" top="70">
+				<g:Label text="Department:" width="208px" height="18px" ui:field="departmentLabel"/>
+			</g:at>
+			<g:at left="182" top="94">
+				<g:Label text="Access code:" ui:field="accessCodeLabel" width="208px" height="18px"/>
+			</g:at>
+		</g:AbsolutePanel>
+</ui:UiBinder> 

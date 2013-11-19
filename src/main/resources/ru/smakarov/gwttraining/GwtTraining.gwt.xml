@@ -22,5 +22,9 @@
   <!-- Specify the paths for translatable code                    -->
   <source path='client' />
   <source path='shared' />
-
+  
+  <!-- Build for Chrome only to reduce overall build time for
+       development. -->
+  <set-property name="user.agent" value="safari" />
+  
 </module>

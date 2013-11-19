@@ -32,3 +32,17 @@ h1 {
 #closeButton {
   margin: 15px 6px 6px;
 }
+.security-badge-label {
+	font-size: 20px;
+    font-weight: bold;
+    color: green;
+    text-align: center;
+}
+.security-badge-border {
+   border: 5px solid lightgreen;
+   height: 180px;
+   width: 420px;
+}
+.security-badge-root-panel {
+   border: 5px solid yellow;
+}

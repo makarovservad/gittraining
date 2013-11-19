@@ -1,6 +1,9 @@
 package ru.smakarov.gwttraining.client;
 
+import ru.smakarov.gwttraining.client.widget.personcard.PersonCardUiBinder;
+import ru.smakarov.gwttraining.client.widget.personcard.PersonDO;
 import ru.smakarov.gwttraining.shared.FieldVerifier;
+
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
@@ -30,11 +33,14 @@ public class GwtTraining implements EntryPoint {
       + "connection and try again.";
 
   /**
-   * Create a remote service proxy to talk to the server-side Greeting service.
+   * Create a remote service proxy to talk to the server-side 
+   * Greeting service.
    */
-  private final GreetingServiceAsync greetingService = GWT.create(GreetingService.class);
+  private final GreetingServiceAsync greetingService = 
+		  GWT.create(GreetingService.class);
 
-  private final Messages messages = GWT.create(Messages.class);
+  private final Messages messages = 
+		  GWT.create(Messages.class);
 
   /**
    * This is the entry point method.
@@ -50,10 +56,15 @@ public class GwtTraining implements EntryPoint {
 
     // Add the nameField and sendButton to the RootPanel
     // Use RootPanel.get() to get the entire body element
-    RootPanel.get("nameFieldContainer").add(nameField);
-    RootPanel.get("sendButtonContainer").add(sendButton);
-    RootPanel.get("errorLabelContainer").add(errorLabel);
-
+    RootPanel.get().add(nameField);
+    RootPanel.get().add(sendButton);
+    RootPanel.get().add(errorLabel);
+    
+    // Add newly created widget
+    final PersonDO person = new PersonDO("Sergey Makarov", 
+    		"MERA, BU UC", "RED");
+    RootPanel.get().add(new PersonCardUiBinder(person));
+    
     // Focus the cursor on the name field when the app loads
     nameField.setFocus(true);
     nameField.selectAll();
