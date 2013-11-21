@@ -1,6 +1,6 @@
 package ru.smakarov.gwttraining.client;
 
-import ru.smakarov.gwttraining.client.widget.personcard.PersonCardUiBinder;
+import ru.smakarov.gwttraining.client.widget.personcard.PersonCard;
 import ru.smakarov.gwttraining.client.widget.personcard.PersonDO;
 import ru.smakarov.gwttraining.shared.FieldVerifier;
 
@@ -63,7 +63,7 @@ public class GwtTraining implements EntryPoint {
     // Add newly created widget
     final PersonDO person = new PersonDO("Sergey Makarov", 
     		"MERA, BU UC", "RED");
-    RootPanel.get().add(new PersonCardUiBinder(person));
+    RootPanel.get().add(new PersonCard(person));
     
     // Focus the cursor on the name field when the app loads
     nameField.setFocus(true);

@@ -22,5 +22,8 @@
 			<g:at left="182" top="94">
 				<g:Label text="Access code:" ui:field="accessCodeLabel" width="208px" height="18px"/>
 			</g:at>
+			<g:at left="248" top="143">
+				<g:PushButton text="Validate me" ui:field="validateButton"/>
+			</g:at>
 		</g:AbsolutePanel>
 </ui:UiBinder> 

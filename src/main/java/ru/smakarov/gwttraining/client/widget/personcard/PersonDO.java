@@ -1,6 +1,8 @@
 package ru.smakarov.gwttraining.client.widget.personcard;
 
-public class PersonDO 
+import com.google.gwt.user.client.rpc.IsSerializable;
+
+public class PersonDO implements IsSerializable
 {
 	private String name;
 	private String department;

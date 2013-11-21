@@ -15,6 +15,16 @@
     <servlet-name>greetServlet</servlet-name>
     <url-pattern>/GwtTraining/greet</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>validateServlet</servlet-name>
+    <servlet-class>ru.smakarov.gwttraining.server.ValidationServiceImpl</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>validateServlet</servlet-name>
+    <url-pattern>/GwtTraining/validate</url-pattern>
+  </servlet-mapping>
 
   <!-- Default page to serve -->
   <welcome-file-list>
